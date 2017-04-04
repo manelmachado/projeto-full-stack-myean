@@ -1,0 +1,30 @@
+<p>
+    Angular 4
+</p>
+
+<button (click)="mudar()">Angular 4</button>
+
+<div *ngIf="troca; else outro">
+    <p>com o if</p>
+</div>
+<ng-template #outro>
+    <p>com o else</p>
+</ng-template>
+
+<br>
+<br>
+
+<ul>
+    <li *ngFor="let item of items; let i = index">
+        {{i + 1}} - {{item}}
+    </li>
+</ul>
+
+<br>
+<br>
+
+<ul>
+    <li *ngFor="let item of items; count as count; index as i">
+        {{count}} - {{item}} - {{i + 1}}
+    </li>
+</ul>

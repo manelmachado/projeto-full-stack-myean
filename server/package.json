@@ -1,0 +1,26 @@
+{
+  "name": "full-stack",
+  "version": "1.0.0",
+  "description": "servidor de uma aplicação full-stack com NodeJS e Angular 2",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Angular2",
+    "NodeJS",
+    "express",
+    "MySql",
+    "full-stack",
+    "JavaScript",
+    "Thiago",
+    "guedes"
+  ],
+  "author": "Thiago Guedes",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "mysql": "^2.13.0"
+  }
+}
