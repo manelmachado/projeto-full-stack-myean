@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { Inventario } from './invetario/model/inventario';
 import { TesteService } from './teste.service';
-import { Resposta } from './invetario/model/resposta';
+import { Inventario } from "app/inventario/model/inventario";
+import { Resposta } from "app/inventario/model/resposta";
 
 @Component({
   selector: 'app-root',
