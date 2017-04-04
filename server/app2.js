@@ -22,6 +22,7 @@ app.get('/inventario/', function(req, res) {
 
 .get('/inventario/:id', (req, res) => {
     res.send(queries.peloID(req.params.id));
+    
 })
 
 .post('/inventario/', (req, res) => {
