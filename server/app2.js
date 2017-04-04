@@ -17,14 +17,11 @@ app.use(per.permi);
 
 
 app.get('/inventario/', function(req, res) {
-
     res.send(queries.tudo());
-
 })
 
 .get('/inventario/:id', (req, res) => {
-    res.send(queries.peloID(req.params.id));
-    
+    res.send(queries.peloID(req.params.id));    
 })
 
 .post('/inventario/', (req, res) => {
