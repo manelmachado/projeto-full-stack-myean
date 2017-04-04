@@ -8,9 +8,7 @@ import { ClientesComponent } from './clientes/clientes.component';
 import { HomeComponent } from './home/home.component';
 import { ContatosComponent } from './contatos/contatos.component';
 import { HomeRoutingModule } from './app.routing.module';
-import { Angular4Component } from './angular4/angular4.component';
-import { TesteService } from './teste.service';
-import { InventarioModule } from "app/inventario/inventario.module";
+import { InventarioService } from "app/service/inventario.service";
 
 @NgModule({
   declarations: [
@@ -18,17 +16,15 @@ import { InventarioModule } from "app/inventario/inventario.module";
     ClientesComponent,
     HomeComponent,
     ContatosComponent,
-    Angular4Component,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-
-    HomeRoutingModule,
-    InventarioModule
+    
+    HomeRoutingModule,    
   ],
-  providers: [TesteService],
+  providers: [InventarioService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

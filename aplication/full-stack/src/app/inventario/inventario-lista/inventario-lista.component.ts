@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Inventario } from '../model/inventario';
-import { InventarioService } from '../service/inventario.service';
+import { Inventario } from "app/model/inventario";
+import { InventarioService } from "app/service/inventario.service";
 
 @Component({
   selector: 'app-inventario-lista',

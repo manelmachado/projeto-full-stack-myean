@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Resposta } from './../../model/resposta';
+import { Inventario } from './../../model/inventario';
+import { InventarioService } from './../../service/inventario.service';
+
 @Component({
   selector: 'app-inventario-detalhe',
   templateUrl: './inventario-detalhe.component.html',
@@ -13,9 +17,19 @@ export class InventarioDetalheComponent implements OnInit {
   preco: string;
   provedor: string;
 
-  constructor() { }
+  inventario: Inventario = new Inventario();
+  msnResposta: string;
+
+  constructor(private service: InventarioService) { }
 
   ngOnInit() {
+  }
+
+  enviar() {
+    this.service.gravar(this.inventario).subscribe(
+                          (resp) => this.msnResposta = resp.res,
+                          (resp) => this.msnResposta = resp.res
+    );
   }
 
 }
