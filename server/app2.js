@@ -17,7 +17,6 @@ app.use(per.permi);
 
 
 app.get('/inventario/', function(req, res) {
-    
     res.send(queries.tudo());
 })
 
