@@ -1,6 +1,17 @@
 function allwo() {
+
+    
     this.permi = function(req, res, next) {
-        res.header('Access-Control-Allow-Origin', '*');
+        var liberados = [
+        'http://localhost:4200'
+        ];
+
+        var urlDePedido = req.header.origin;
+        if (liberados.include(urlDePedido)) {
+            res.setHeader('Access-Control-Allow-Origin', urlDePedido);            
+        }
+        
+        //res.header('Access-Control-Allow-Origin', '*');
         res.header('Access-Control-Allow-headers', 'Content-Type');
         res.header('Access-Control-Allow-Methods', 'GET, PUT, POST, DELETE, OPTIONS');
         next();

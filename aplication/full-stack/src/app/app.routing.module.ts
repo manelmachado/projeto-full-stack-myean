@@ -8,6 +8,7 @@ import { InventarioComponent } from './inventario/inventario/inventario.componen
 
 const routes: Routes = [
     { path: '', component: HomeComponent },
+    //{path: 'inventario', loadChildren: 'app/inventario/inventario.module#InventarioModule'},
     //{ path: 'inventario', component: InventarioComponent},
     { path: 'clientes', component: ClientesComponent },
     {path: 'contatos', component: ContatosComponent},
