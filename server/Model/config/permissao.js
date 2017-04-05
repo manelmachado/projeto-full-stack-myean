@@ -6,11 +6,11 @@ function allwo() {
         'http://localhost:4200'
         ];
 
-        var urlDePedido = req.header.origin;
+        var urlDePedido = req.headers.origin;
         if (liberados.include(urlDePedido)) {
             res.setHeader('Access-Control-Allow-Origin', urlDePedido);            
         }
-        
+
         //res.header('Access-Control-Allow-Origin', '*');
         res.header('Access-Control-Allow-headers', 'Content-Type');
         res.header('Access-Control-Allow-Methods', 'GET, PUT, POST, DELETE, OPTIONS');
