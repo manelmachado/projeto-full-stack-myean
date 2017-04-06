@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Resposta } from './../../model/resposta';
 import { Inventario } from './../../model/inventario';
 import { InventarioService } from './../../service/inventario.service';
+import { ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: 'app-inventario-detalhe',
@@ -19,10 +20,19 @@ export class InventarioDetalheComponent implements OnInit {
 
   inventario: Inventario = new Inventario();
   msnResposta: string;
+  id: any;
 
-  constructor(private service: InventarioService) { }
+  constructor(private service: InventarioService, private url: ActivatedRoute) { }
 
   ngOnInit() {
+    this.url.params.subscribe(res => this.id = res['id']);
+    if (this.id) {
+      this.service.getPeloID(this.id)
+                  .subscribe(
+                    (res) => this.inventario = res,
+                    (err) => console.log(err),
+                  );  //parseInt(this.id)
+    }
   }
 
   enviar() {

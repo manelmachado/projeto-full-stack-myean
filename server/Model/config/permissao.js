@@ -7,7 +7,7 @@ function allwo() {
         ];
 
         var urlDePedido = req.headers.origin;
-        if (liberados.include(urlDePedido)) {
+        if (liberados.includes(urlDePedido)) {
             res.setHeader('Access-Control-Allow-Origin', urlDePedido);            
         }
 

@@ -1,9 +1,36 @@
 'use strutc'
 
-var conexao = require('../Model/conexao');
+//var conexao = require('../Model/conexao');
+
+inventario = [
+    {id: 1,
+     produto: 'mouse',
+     existencia: 10,
+     preco: 50,
+     provedor: 'intel'
+    },
+    {id: 2,
+     produto: 'mouse',
+     existencia: 10,
+     preco: 50,
+     provedor: 'intel'
+    },
+    {id: 3,
+     produto: 'mouse',
+     existencia: 10,
+     preco: 50,
+     provedor: 'intel'
+    },
+    {id: 4,
+     produto: 'mouse',
+     existencia: 10,
+     preco: 50,
+     provedor: 'intel'
+    }
+]
 
 exports.tudo = (callback) => {
-    conexao.conexao((con) => {
+    /*(conexao.conexao((con) => {
         con.query('select * from inventario', (err, resBanco) => {
             if (err) {
                 console.log('erro na busca');
@@ -12,11 +39,12 @@ exports.tudo = (callback) => {
                 callback(resBanco);
             }
         })
-    })
+    })*/
+callback(inventario);    
 }
 
 exports.peloId = (id, callback) => {
-    conexao.conexao((con) => {
+    /*conexao.conexao((con) => {
         con.query('select * from inventario where id=?', id, (err, resBanco) => {
             if (err) {
                 console.log('erro na busca por id');
@@ -25,7 +53,8 @@ exports.peloId = (id, callback) => {
                 callback(resBanco)
             }
         })
-    })
+    })*/
+    callback(inventario[0]);
 }
 
 exports.inserir = (body, callback) => {

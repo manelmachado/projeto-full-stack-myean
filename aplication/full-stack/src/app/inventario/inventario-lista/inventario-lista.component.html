@@ -23,6 +23,9 @@
                         <td>{{item.existencia}}</td>
                         <td>{{item.preco}}</td>
                         <td>{{item.provedor}}</td>
+                        <td>
+                            <button class="btn btn-sm btn-primary" (click)="selecionar(item.id)">Selecionar</button>
+                        </td>
                     </tr>
                 </tbody>
             </table>
