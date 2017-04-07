@@ -13,6 +13,7 @@
                         <th>Existencia</th>
                         <th>Preço</th>
                         <th>Provedor</th>
+                        <th>Opções</th>
                     </tr>
                 </thead>
 
@@ -24,7 +25,12 @@
                         <td>{{item.preco}}</td>
                         <td>{{item.provedor}}</td>
                         <td>
-                            <button class="btn btn-sm btn-primary" (click)="selecionar(item.id)">Selecionar</button>
+                            <button class="btn btn-sm btn-primary" (click)="selecionar(item.id)">
+                               <i class="fa fa-pencil fa-fw"></i> Selecionar
+                            </button>
+                            <button class="btn btn-sm btn-danger" (click)="eliminar(item.id)">
+                                <i class="fa fa-trash-o fa-fw"></i> Eliminar
+                            </button>
                         </td>
                     </tr>
                 </tbody>

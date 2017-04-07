@@ -85,7 +85,7 @@ exports.atualizar = (body, callback) => {
 }
 
 exports.deletar = (id, callback) => {
-    conexao.conexao((con) => {
+    /*conexao.conexao((con) => {
         con.query('delete from inventario where id=?', id, (err) => {
             if (err) {
                 console.log(err);
@@ -94,5 +94,6 @@ exports.deletar = (id, callback) => {
                 callback({ res: 'Deletado!' });
             }
         })
-    })
+    })*/
+    callback({ res: 'Deletado!' });
 }

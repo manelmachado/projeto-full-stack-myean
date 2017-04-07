@@ -25,4 +25,15 @@ export class InventarioListaComponent implements OnInit {
   selecionar(id: number) {
     this.rota.navigate(['/inventario/detalhe',id]);
   }
+
+  eliminar(id: number) {
+    this.service.deletar(id).subscribe(
+                              resp => console.log(resp),
+                              (err) => console.log(err),
+                              () => {
+                                console.log('filtrar');
+                                this.lista = this.lista.filter(h => h.id != id)
+                              }
+    );
+  }
 }
