@@ -2,7 +2,12 @@
     inventario works!
 </p>
 
-<button class="btn btn-primary" routerLink="detalhe">Detalhe</button>
-<button class="btn btn-primary" routerLink="lista">Lista</button>
+<button class="btn btn-primary" routerLink="detalhe" [@botoes]="estado1" (mouseenter)="estado1 = 'ativo'" (mouseleave)="estado1 = 'inativo'" (click)="estado1 = 'clicado'">
+    Detalhe
+</button>
+
+<button class="btn btn-primary" routerLink="lista">
+    Lista
+</button>
 
 <router-outlet></router-outlet>
