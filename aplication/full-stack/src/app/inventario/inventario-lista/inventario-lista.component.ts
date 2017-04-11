@@ -1,14 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostBinding } from '@angular/core';
 import { Inventario } from "app/model/inventario";
 import { InventarioService } from "app/service/inventario.service";
 import { Router } from "@angular/router";
+import { Animacao } from "../../animacao";
 
 @Component({
   selector: 'app-inventario-lista',
   templateUrl: './inventario-lista.component.html',
-  styleUrls: ['./inventario-lista.component.css']
+  styleUrls: ['./inventario-lista.component.css'],
+  animations: [Animacao]
 })
 export class InventarioListaComponent implements OnInit {
+
+  @HostBinding('@routerAnimation') routerAnimation = true;
+  @HostBinding('style.display') display = 'block';
+  @HostBinding('style.position') position = 'absolute'; 
 
   lista: Inventario[];
 
