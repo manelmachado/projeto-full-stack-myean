@@ -14,10 +14,10 @@ trigger('routerAnimation', [
             opacity: 0,
             transform: 'translateX(-100%)'
         }),
-        animate('0.3s ease-in')
+        animate('0.5s ease-in')
     ]),
     transition(':leave', [
-        animate('0.3s ease-out', style({
+        animate('0.5s ease-out', style({
             opacity: 0,
             transform: 'translateX(100%)'
         })),

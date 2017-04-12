@@ -10,7 +10,7 @@ import { ClientesComponent } from './clientes/clientes.component';
 import { HomeComponent } from './home/home.component';
 import { ContatosComponent } from './contatos/contatos.component';
 import { InventarioService } from 'app/service/inventario.service';
-import { InventarioModule } from "app/inventario/inventario.module";
+//import { InventarioModule } from "app/inventario/inventario.module";
 
 
 @NgModule({
@@ -28,7 +28,7 @@ import { InventarioModule } from "app/inventario/inventario.module";
     HttpModule,
     AppRoutingModule,
 
-    InventarioModule, 
+    //InventarioModule, 
   ],
   providers: [InventarioService],
   bootstrap: [AppComponent]

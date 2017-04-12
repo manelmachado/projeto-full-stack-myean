@@ -17,8 +17,13 @@ import { InventarioRoutingModule } from './inventario.routing.module';
   imports: [
     CommonModule,
     FormsModule,
-    InventarioRoutingModule,
+    InventarioRoutingModule
   ],
-  providers: [InventarioService]
+  /*exports: [
+    InventarioComponent,
+    InventarioListaComponent,
+    InventarioDetalheComponent
+  ],*/
+  //providers: [InventarioService]
 })
 export class InventarioModule { }
