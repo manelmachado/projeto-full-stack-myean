@@ -3,7 +3,8 @@ function allwo() {
     
     this.permi = function(req, res, next) {
         var liberados = [
-        'http://localhost:4200'
+        'http://localhost:4200',
+        'http://localhost:8100'
         ];
 
         var urlDePedido = req.headers.origin;

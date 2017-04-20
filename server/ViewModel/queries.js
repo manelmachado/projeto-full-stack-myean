@@ -58,7 +58,7 @@ exports.peloId = (id, callback) => {
 }
 
 exports.inserir = (body, callback) => {
-    conexao.conexao((con) => {
+    /*conexao.conexao((con) => {
         con.query('insert into inventario set ?', body, (err, resBanco) => {
             if (err) {
                 console.log(err);
@@ -67,11 +67,12 @@ exports.inserir = (body, callback) => {
                 callback({ 'res': 'Inserido!' });
             }
         });
-    })
+    })*/
+    callback({ 'res': 'Inserido!' });
 }
 
 exports.atualizar = (body, callback) => {
-    conexao.conexao((con) => {
+    /*conexao.conexao((con) => {
         con.query('update inventario set ? where id= ?', [body, body.id], (err) => {
             if (err) {
                 console.log(err);
@@ -80,8 +81,8 @@ exports.atualizar = (body, callback) => {
                 callback({ res: 'Atualizado!' });
             }
         })
-    })
-
+    })*/
+    callback({ res: 'Atualizado!' });
 }
 
 exports.deletar = (id, callback) => {
