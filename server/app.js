@@ -46,6 +46,6 @@ app.get('/inventario/', function(req, res) {
     })
 })
 
-.listen(3000, () => {
+.listen(8080, () => {
     console.log('servidor rodando!!!');
 });
